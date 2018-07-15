@@ -187,6 +187,11 @@ print("SIZE: " + str(df.size) + " COLUMNS: " + str(df.columns) + "\n")
 #print("Visiting teams!: \n" + str(df[3].unique()) + "\n")
 
 
-df.plot(x="V Homeruns", y="H Homeruns", kind="scatter")
+#df.plot(x="V Homeruns", y="H Homeruns", kind="scatter")
+
+pl = pd.DataFrame(names=['Player', 'wins', 'losses'])
+
+
+
 
 matplotlib.pyplot.show()
