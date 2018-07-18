@@ -161,3 +161,5 @@ CREATE TABLE baseball.game_data (
     additional_information        VARCHAR(255),
     acquisition_information       VARCHAR(255)
 );
+
+GRANT SELECT ON TABLE baseball.game_data TO analyst;

@@ -8,5 +8,5 @@ CREATE USER dataloader PASSWORD 'bigdata';
 CREATE SCHEMA baseball;
 CREATE SCHEMA kafka_test;
 -- Setup perms on schemas
-GRANT SELECT ON ALL TABLES IN SCHEMA baseball TO analyst;
+GRANT USAGE ON SCHEMA baseball TO analyst;
 ALTER SCHEMA kafka_test OWNER TO dataloader;
