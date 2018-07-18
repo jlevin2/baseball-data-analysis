@@ -1,20 +1,19 @@
 import psycopg2
 import os
+import configparser
 
 class SQLConn():
-    def __init__(self):
-        file = open('config/pw.txt', 'r')
+    def __init__(self, config):
+        conf = configparser.ConfigParser()
 
-        pw = file.readline()
-
-        file.close()
+        conf.read('config/config.ini')
 
         self.conn = psycopg2.connect(
-                                dbname="postgres",
-                                user="admin",
-                                password=pw,
-                                host="localhost",
-                                port=5432
+                                dbname=conf[config]['dbname'],
+                                user=conf[config]['user'],
+                                password=conf[config]['password'],
+                                host=conf[config]['host'],
+                                port=conf[config]['port']
                             )
         self.cur = self.conn.cursor()
 
@@ -22,28 +21,34 @@ class SQLConn():
         self.cur.close()
         self.conn.close()
 
-    def executeSQL(self, sql):
+    def executeSQL(self, sql, fetch):
         try:
             self.cur.execute(sql)
             self.conn.commit()
-            res = self.cur.fetchall()
-            return True, res, ''
+            if fetch:
+                res = self.cur.fetchall()
+                return True, res, ''
+            else:
+                return True, [], ''
         except Exception as e:
             return False, [], str(e)
 
 
-    def executeSQLFile(self, path):
-        if not os.path.isfile(path):
-            return False, 'File not found'
+    def executeSQLFile(self, path, fetch):
+        if not os.path.exists(path):
+            return False, [], 'File not found: {0}!'.format(path)
 
         file = open(path, 'r')
 
         try:
             self.cur.execute(file.read())
             self.conn.commit()
-            res = self.cur.fetchall()
             file.close()
-            return True, res, ''
+            if fetch:
+                res = self.cur.fetchall()
+                return True, res, ''
+            else:
+                return True, [], ''
         except Exception as e:
             file.close()
-            return False, [], str(e)
+            return (False, [], str(e))

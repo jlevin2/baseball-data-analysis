@@ -2,13 +2,26 @@ import sql_conn
 
 
 def main():
-    con = sql_conn.SQLConn()
+    print('Starting!\n')
+    con = sql_conn.SQLConn('super')
+    print('Initializing!\n')
+    ok, _, err = con.executeSQLFile('/Users/JoshLevin/PycharmProjects/' +
+                                    'baseball-data-analysis/sql/initialization.sql',
+                                    False)
+    if not ok:
+        raise Exception(err)
 
-    con.executeSQLFile('sql/initialization.sql')
+    ok, _, err = con.executeSQLFile('/Users/JoshLevin/PycharmProjects/' +
+                                    'baseball-data-analysis/ddl/game_data.sql',
+                                    False)
+    if not ok:
+        raise Exception(err)
 
-    con.executeSQLFile('ddl/game_data.sql')
-
-    con.executeSQLFile('sql/baseball_load.sql')
+    ok, _, err = con.executeSQLFile('/Users/JoshLevin/PycharmProjects/' +
+                                    'baseball-data-analysis/sql/baseball_load.sql',
+                                    False)
+    if not ok:
+        raise Exception(err)
 
 
 if __name__ == "__main__":
