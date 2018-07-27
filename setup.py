@@ -17,11 +17,17 @@ def main():
     if not ok:
         raise Exception(err)
 
-    ok, _, err = con.executeSQLFile('/Users/JoshLevin/PycharmProjects/' +
-                                    'baseball-data-analysis/sql/baseball_load.sql',
-                                    False)
+    ok, _, err = con.executeSQL('GRANT SELECT ON TABLE baseball.game_data TO analyst;',
+                                False)
+
     if not ok:
         raise Exception(err)
+
+    # ok, _, err = con.executeSQLFile('/Users/JoshLevin/PycharmProjects/' +
+    #                                 'baseball-data-analysis/sql/baseball_load.sql',
+    #                                 False)
+    # if not ok:
+    #     raise Exception(err)
 
 
 if __name__ == "__main__":

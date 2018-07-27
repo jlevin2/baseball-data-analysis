@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  postgresql:
+    image: 'bitnami/postgresql:latest'
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRESQL_PASSWORD=fb38099b58eb9ead913a584dcd298ff4d02af6d6be2a37bad50d0714f16af5d1
+    volumes:
+      - /Users/JoshLevin/Projects/postgres-data/:/bitnami
