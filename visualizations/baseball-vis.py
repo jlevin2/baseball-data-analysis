@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib
-import sql_conn
+from visualizations import sql_conn
+
 
 # conn = sql_conn.SQLConn('josh')
 #

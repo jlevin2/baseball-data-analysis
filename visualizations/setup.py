@@ -1,4 +1,4 @@
-import sql_conn
+from visualizations import sql_conn
 
 
 def main():

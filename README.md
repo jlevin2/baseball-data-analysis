@@ -11,3 +11,7 @@ Playground for performing simple analysis on open-source baseball data 2010-2017
 ```venv/python setup.py```
 
 docker run -d -p 5432:5432 postgres-server
+
+Test if kafka is running:
+```echo dump | nc localhost 2181 | grep brokers```
+
