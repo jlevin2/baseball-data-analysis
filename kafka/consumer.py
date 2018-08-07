@@ -3,32 +3,34 @@ from kafka import KafkaConsumer
 
 
 if __name__ == "__main__":
-    consumer = KafkaConsumer(bootstrap_servers='localhost:9092',
-                             auto_offset_reset='earliest',
-                             consumer_timeout_ms=1000)
+    consumer = KafkaConsumer(
+        bootstrap_servers=['localhost:9092','localhost:9093','localhost:9094'],
+        auto_offset_reset='earliest',
+        client_id='test_fetcher',
+        consumer_timeout_ms=1000)
 
-    consumer.subscribe(['numbers2'])
-
+    consumer.subscribe(['Person'])
 
     print(consumer.topics())
 
-    print(consumer.partitions_for_topic('numbers2'))
+    print(consumer.assignment())
+    print(consumer.end_offsets(consumer.assignment()))
 
-    tp = kafka.TopicPartition(
-        'numbers2',
-        0
-    )
+    for msg in consumer:
+        print(msg.topic)
+        print(msg.partition)
+        print(msg.offset)
+        print(msg.key)
+        print(msg.value)
 
-    consumer.seek(tp, 0)
 
-    print(consumer.poll())
 
     #resp = consumer.poll(max_records=1000)
 
     #print(resp)
 
-    for message in consumer:
-        print(message)
+    # for message in consumer:
+    #     print(message)
         #print(str(int.from_bytes(message, byteorder='little')))
 
     consumer.close()

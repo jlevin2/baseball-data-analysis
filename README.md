@@ -15,3 +15,9 @@ docker run -d -p 5432:5432 postgres-server
 Test if kafka is running:
 ```echo dump | nc localhost 2181 | grep brokers```
 
+Kafka env variables: https://github.com/bitnami/bitnami-docker-kafka
+
+## Stock Market Data
+
+Data provided for free by IEX. View IEX’s Terms of Use.
+https://iextrading.com/developer/

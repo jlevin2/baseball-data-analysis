@@ -22,7 +22,8 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ADVERTISED_HOST_NAME: 192.168.0.17
       KAFKA_ADVERTISED_PORT: 9092
-      KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2181,zoo3:2181
+      KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2182,zoo3:2183
+      KAFKA_NUM_PARTITIONS: 3
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   kafka2:
@@ -38,7 +39,8 @@ services:
       KAFKA_BROKER_ID: 2
       KAFKA_ADVERTISED_HOST_NAME: 192.168.0.17
       KAFKA_ADVERTISED_PORT: 9093
-      KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2181,zoo3:2181
+      KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2182,zoo3:2183
+      KAFKA_NUM_PARTITIONS: 3
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   kafka3:
@@ -54,33 +56,34 @@ services:
       KAFKA_BROKER_ID: 3
       KAFKA_ADVERTISED_HOST_NAME: 192.168.0.17
       KAFKA_ADVERTISED_PORT: 9094
-      KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2181,zoo3:2181
+      KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2182,zoo3:2183
+      KAFKA_NUM_PARTITIONS: 3
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   zoo1:
-    image: wurstmeister/zookeeper
+    image: zookeeper
     ports:
       - "2181:2181"
       - "2888"
       - "3888"
     environment:
-      MYID: 1
-      SERVERS: zoo1,zoo2,zoo3
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
   zoo2:
-    image: wurstmeister/zookeeper
+    image: zookeeper
     ports:
       - "2182:2181"
       - "2888"
       - "3888"
     environment:
-      MYID: 2
-      SERVERS: zoo1,zoo2,zoo3
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=0.0.0.0:2888:3888 server.3=zoo3:2888:3888
   zoo3:
-    image: wurstmeister/zookeeper
+    image: zookeeper
     ports:
       - "2183:2181"
       - "2888"
       - "3888"
     environment:
-      MYID: 3
-      SERVERS: zoo1,zoo2,zoo3
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=0.0.0.0:2888:3888
