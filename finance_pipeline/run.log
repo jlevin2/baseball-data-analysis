@@ -1,0 +1,78 @@
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Sent Price for stock INTC to Kafka
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Sent Price for stock AAPL to Kafka
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Sent Price for stock INTC to Kafka
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Sent Price for stock AAPL to Kafka
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Sent Price for stock AAPL to Kafka
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Sent Price for stock INTC to Kafka
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Sent Price for stock AAPL to Kafka
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Sent Price for stock INTC to Kafka
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Sent Price for stock AAPL to Kafka
+INFO:Stocks:Sent Price for stock INTC to Kafka
+INFO:Stocks:Fetching company data for MSFT
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching company data for AAPL
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching company data for INTC
+INFO:Stocks:Starting deploy of jobs
+INFO:Stocks:Fetching Price for stock MSFT
+INFO:Stocks:Sent Price for stock MSFT to Kafka
+INFO:Stocks:Fetching Price for stock AAPL
+INFO:Stocks:Fetching Price for stock INTC
+INFO:Stocks:Sent Price for stock AAPL to Kafka
+INFO:Stocks:Sent Price for stock INTC to Kafka

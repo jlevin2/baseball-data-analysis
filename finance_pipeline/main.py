@@ -5,15 +5,14 @@ import hashlib
 import json
 from threading import Timer
 from multiprocessing import Process
-from .stock import Stock
+from finance_pipeline.stock import Stock
 
 
-logging.basicConfig(filename='logs/stock.log',
-                    format='%(asctime) %(message)s')
+logging.basicConfig(filename='run.log') #, format='%(asctime) %(message)s')
 
 loger = logging.getLogger('Stocks')
 
-loger.setLevel('Info')
+loger.setLevel('INFO')
 
 
 def main():
@@ -25,6 +24,7 @@ def main():
             stk = Stock(tick.strip())
             stk.start()
             processes.append(stk)
+            stk.goInfo()
 
 
 if __name__ == "__main__":
