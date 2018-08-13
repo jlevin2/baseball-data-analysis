@@ -17,7 +17,9 @@ Test if kafka is running:
 
 Kafka env variables: https://github.com/bitnami/bitnami-docker-kafka
 
+
 ## Stock Market Data
 
 Data provided for free by IEX. View IEX’s Terms of Use.
 https://iextrading.com/developer/
+

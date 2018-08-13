@@ -6,7 +6,7 @@ class SQLConn():
     def __init__(self, config):
         conf = configparser.ConfigParser()
 
-        conf.read('config/config.ini')
+        conf.read('config/db-config.ini')
 
         self.conn = psycopg2.connect(
                                 dbname=conf[config]['dbname'],
@@ -18,8 +18,9 @@ class SQLConn():
         self.cur = self.conn.cursor()
 
     def __del__(self):
-        self.cur.close()
-        self.conn.close()
+        if hasattr(self, 'cur'):
+            self.cur.close()
+            self.conn.close()
 
     def executeSQL(self, sql, fetch):
         try:

@@ -2,7 +2,7 @@ import kafka
 from kafka import KafkaConsumer
 
 
-if __name__ == "__main__":
+def main():
     consumer = KafkaConsumer(
         bootstrap_servers=['localhost:9092','localhost:9093','localhost:9094'],
         auto_offset_reset='earliest',

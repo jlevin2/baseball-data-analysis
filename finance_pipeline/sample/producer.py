@@ -2,7 +2,7 @@ from kafka import KafkaProducer
 import json
 import hashlib
 
-if __name__ == "__main__":
+def main():
     pro = KafkaProducer(
         bootstrap_servers=['localhost:9092','localhost:9093','localhost:9094'],
         client_id='zach'
