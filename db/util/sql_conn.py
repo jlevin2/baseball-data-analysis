@@ -2,11 +2,14 @@ import psycopg2
 import os
 import configparser
 
+# Utility class that reads from config file
+# and executes a SQL file or raw sql as specified user
+
 class SQLConn():
     def __init__(self, config):
         conf = configparser.ConfigParser()
 
-        conf.read('config/db-config.ini')
+        conf.read('../../config/db-config.ini')
 
         self.conn = psycopg2.connect(
                                 dbname=conf[config]['dbname'],
