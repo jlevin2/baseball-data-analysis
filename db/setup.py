@@ -1,5 +1,7 @@
 from db.util import sql_conn
 
+# Run on fresh postgres DB to setup permissions/schemas/etc.
+
 def main():
     print('Starting!\n')
     con = sql_conn.SQLConn('super')

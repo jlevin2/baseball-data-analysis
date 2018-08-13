@@ -17,6 +17,7 @@ Test if kafka is running:
 
 Kafka env variables: https://github.com/bitnami/bitnami-docker-kafka
 
+To run spark: spark-submit --master local[2] --jars spark-streaming-kafka-0-8-assembly_2.11-2.3.1.jar spark-test.py
 
 ## Stock Market Data
 
