@@ -6,7 +6,7 @@ CREATE USER dataloader PASSWORD 'bigdata';
 -- Create schemas for baseball (static data) and
 -- Kafka loaded data
 CREATE SCHEMA baseball;
-CREATE SCHEMA kafka_test;
+CREATE SCHEMA finance;
 -- Setup perms on schemas
 GRANT USAGE ON SCHEMA baseball TO analyst;
-ALTER SCHEMA kafka_test OWNER TO dataloader;
+ALTER SCHEMA finance OWNER TO dataloader;

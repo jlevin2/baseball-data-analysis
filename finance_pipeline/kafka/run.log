@@ -1,0 +1,77 @@
+2018-08-11 17:24:35,522 Stock-1 Starting deploy of jobs
+2018-08-11 17:24:35,523 Stock-1 Fetching company data
+2018-08-11 17:24:35,656 Stock-2 Starting deploy of jobs
+2018-08-11 17:24:35,658 Stock-2 Fetching company data
+2018-08-11 17:24:35,803 Stock-3 Starting deploy of jobs
+2018-08-11 17:24:35,805 Stock-3 Fetching company data
+2018-08-11 17:24:35,928 Stock-4 Starting deploy of jobs
+2018-08-11 17:24:35,931 Stock-4 Fetching company data
+2018-08-11 17:24:36,059 Stock-5 Starting deploy of jobs
+2018-08-11 17:24:36,060 Stock-5 Fetching company data
+2018-08-11 17:40:29,876 Stock-MSFT Starting deploy of jobs
+2018-08-11 17:40:29,878 Stock-MSFT Fetching company data
+2018-08-11 17:40:30,059 Stock-AAPL Starting deploy of jobs
+2018-08-11 17:40:30,059 Stock-AAPL Fetching company data
+2018-08-11 17:40:30,176 Stock-INTC Starting deploy of jobs
+2018-08-11 17:40:30,176 Stock-INTC Fetching company data
+2018-08-11 17:40:30,301 Stock-GE Starting deploy of jobs
+2018-08-11 17:40:30,301 Stock-GE Fetching company data
+2018-08-11 17:40:30,429 Stock-GOOGL Starting deploy of jobs
+2018-08-11 17:40:30,430 Stock-GOOGL Fetching company data
+2018-08-11 17:40:31,540 Stock-AAPL Sent company data for stock to Kafka
+2018-08-11 17:40:31,540 Stock-AAPL Fetching Price
+2018-08-11 17:40:31,548 Stock-INTC Sent company data for stock to Kafka
+2018-08-11 17:40:31,553 Stock-INTC Fetching Price
+2018-08-11 17:40:31,637 Stock-MSFT Sent company data for stock to Kafka
+2018-08-11 17:40:31,637 Stock-MSFT Fetching Price
+2018-08-11 17:40:31,992 Stock-GOOGL Sent company data for stock to Kafka
+2018-08-11 17:40:31,993 Stock-GOOGL Fetching Price
+2018-08-11 17:40:32,342 stock-unit-AAPL-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,347 stock-unit-MSFT-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,374 stock-unit-INTC-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,453 Stock-GE Sent company data for stock to Kafka
+2018-08-11 17:40:32,454 Stock-GE Fetching Price
+2018-08-11 17:40:32,592 stock-unit-MSFT-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,614 stock-unit-INTC-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,735 stock-unit-GOOGL-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,802 stock-unit-AAPL-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,965 stock-unit-MSFT-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,975 stock-unit-GOOGL-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,979 stock-unit-AAPL-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:32,984 stock-unit-INTC-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:33,109 Stock-INTC Sent Price for stock to Kafka
+2018-08-11 17:40:33,171 Stock-GOOGL Sent Price for stock to Kafka
+2018-08-11 17:40:33,264 Stock-AAPL Sent Price for stock to Kafka
+2018-08-11 17:40:33,285 stock-unit-GE-network-thread Topic Stocks_Price is not available during auto-create initialization
+2018-08-11 17:40:33,290 Stock-MSFT Sent Price for stock to Kafka
+2018-08-11 17:40:33,415 Stock-GE Sent Price for stock to Kafka
+2018-08-11 17:41:33,380 Stock-AAPL Fetching Price
+2018-08-11 17:41:33,480 Stock-MSFT Fetching Price
+2018-08-11 17:41:33,814 Stock-GE Fetching Price
+2018-08-11 17:41:33,814 Stock-INTC Fetching Price
+2018-08-11 17:41:33,823 Stock-GOOGL Fetching Price
+2018-08-11 17:41:33,911 Stock-AAPL Sent Price for stock to Kafka
+2018-08-11 17:41:33,937 Stock-MSFT Sent Price for stock to Kafka
+2018-08-11 17:41:34,295 Stock-GE Sent Price for stock to Kafka
+2018-08-11 17:41:34,329 Stock-GOOGL Sent Price for stock to Kafka
+2018-08-11 17:41:34,357 Stock-INTC Sent Price for stock to Kafka
+2018-08-11 17:42:33,963 Stock-MSFT Fetching Price
+2018-08-11 17:42:33,969 Stock-AAPL Fetching Price
+2018-08-11 17:42:34,342 Stock-GE Fetching Price
+2018-08-11 17:42:34,392 Stock-INTC Fetching Price
+2018-08-11 17:42:34,418 Stock-GOOGL Fetching Price
+2018-08-11 17:42:34,459 Stock-AAPL Sent Price for stock to Kafka
+2018-08-11 17:42:34,474 Stock-MSFT Sent Price for stock to Kafka
+2018-08-11 17:42:34,739 Stock-GE Sent Price for stock to Kafka
+2018-08-11 17:42:34,817 Stock-GOOGL Sent Price for stock to Kafka
+2018-08-11 17:42:34,880 Stock-INTC Sent Price for stock to Kafka
+2018-08-11 17:43:34,482 Stock-AAPL Fetching Price
+2018-08-11 17:43:34,501 Stock-MSFT Fetching Price
+2018-08-11 17:43:34,753 Stock-GE Fetching Price
+2018-08-11 17:43:34,829 Stock-GOOGL Fetching Price
+2018-08-11 17:43:34,901 Stock-INTC Fetching Price
+2018-08-11 17:43:34,990 Stock-AAPL Sent Price for stock to Kafka
+2018-08-11 17:43:35,013 Stock-MSFT Sent Price for stock to Kafka
+2018-08-11 17:43:35,189 Stock-GE Sent Price for stock to Kafka
+2018-08-11 17:43:35,242 Stock-GOOGL Sent Price for stock to Kafka
+2018-08-11 17:43:35,413 Stock-INTC Sent Price for stock to Kafka

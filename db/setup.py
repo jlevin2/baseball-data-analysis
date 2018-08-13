@@ -1,5 +1,4 @@
-from visualizations import sql_conn
-
+from db.util import sql_conn
 
 def main():
     print('Starting!\n')
@@ -17,8 +16,9 @@ def main():
     if not ok:
         raise Exception(err)
 
-    ok, _, err = con.executeSQL('GRANT SELECT ON TABLE baseball.game_data TO analyst;',
-                                False)
+    ok, _, err = con.executeSQLFile('/Users/JoshLevin/PycharmProjects/' +
+                                    'baseball-data-analysis/ddl/prices.sql',
+                                    False)
 
     if not ok:
         raise Exception(err)
@@ -28,6 +28,7 @@ def main():
     #                                 False)
     # if not ok:
     #     raise Exception(err)
+    print('Complete DB setup')
 
 
 if __name__ == "__main__":
