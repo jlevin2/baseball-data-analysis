@@ -11,7 +11,8 @@ CREATE TABLE finance.stg_prices (
   latestVolumne           VARCHAR(255),
   change                  VARCHAR(255),
   changePercent           VARCHAR(255),
-  peRatio                 VARCHAR(255)
+  peRatio                 VARCHAR(255),
+  eventID                 VARCHAR(256)
 );
 
 GRANT ALL ON TABLE finance.stg_prices TO dataloader;
