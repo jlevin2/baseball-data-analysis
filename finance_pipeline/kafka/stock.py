@@ -8,6 +8,7 @@ import threading
 from threading import Timer
 from multiprocessing import Process
 import time
+import configparser
 
 loger = logging.getLogger('Stocks')
 
@@ -23,6 +24,11 @@ class Stock(threading.Thread):
             bootstrap_servers=['localhost:9092', 'localhost:9093', 'localhost:9094'],
             client_id='stock-unit-' + self.ticker
         )
+        config = configparser.ConfigParser()
+
+        config.read('../../config/stocks-config.ini')
+
+        self.schema = config['priceSchema']
 
     def __del__(self):
         if hasattr(self, 'producer'):
@@ -72,11 +78,21 @@ class Stock(threading.Thread):
         key = hashlib.sha256(bytes(self.ticker + str(datetime.datetime.now()) + 'price',
                                    'utf-8')).hexdigest()
 
+        cooked = {}
+        # Parse out input schema
+        for col,typ in self.schema.items():
+            if col in resp:
+                cooked[col] = resp[col]
+            else:
+                cooked[col] = 'NULL'
+
+        # Add eventid at end
+        cooked['eventid'] = key
 
         self.producer.send(
             topic='Stocks_Price',
             key=bytes(key, encoding='utf-8'),
-            value=bytes(json.dumps(resp), encoding='utf-8')
+            value=bytes(json.dumps(cooked), encoding='utf-8')
         )
 
         loger.info('Sent Price for stock to Kafka', extra=self.log)
@@ -89,7 +105,8 @@ class Stock(threading.Thread):
         while True:
             self.goPrice()
             self.producer.flush()
-            time.sleep(60)
+            # TODO reset to 60
+            time.sleep(10)
             # t1 = Timer(60, self.goPrice)
             # t1.start()
             #
